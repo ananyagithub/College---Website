@@ -1,0 +1,128 @@
+<html>
+<head>
+<title>Admission Enquiry Form</title>
+<script>
+function f1()
+{
+var n=document.getElementById("t1").value;
+			var n1=document.getElementById("t2").value;
+			var n2=document.getElementById("t3").value;
+			
+			if(n==""){
+				alert("Name field should not be blank");
+				return;
+			}
+			
+			var n_ar=n.split(" ");
+			for(i=0;i<n_ar.length;i++){
+				
+				if(!isNaN(n_ar[i])){
+					alert("Enter correct name 1");
+					return;
+				}
+			}
+             
+
+
+if(n1=="")
+				{
+					alert("Contact number field should not be blank");
+					return;
+				}
+				var n1_ar=n1.split(" ");
+				for(i=0;i<n1_ar.length;i++)
+				{
+					if(isNaN(n1_ar[i]))
+					{
+						alert("Enter correct number");
+						return;
+					}
+				}
+
+
+				if(n1.length!=10)
+				{
+					alert("Enter 10 digits");
+					return;
+				}
+				
+				
+for(var i = 0 ; i < n2.length ; i++){
+					if(n2.charAt(i) == '@')
+						flag = flag + 1;
+						
+					if(n2.charAt(i) == '.')
+						flag = flag + 1;
+			}
+			
+			if(flag != 2)
+				alert("Not a valid email id");
+		}
+}
+}
+</script>
+<style>
+.d1
+{
+text-align:center;
+color:white;
+background-color:blue;
+}
+.div {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+</style>
+</head>
+<div class="div">
+<body background="wd2.jpg">
+</div>
+<form>
+<div class="d1">
+<h1>Admission Enquiry Form</h1>
+</div>
+<form>
+<select>
+<option>Select Course</option>
+<option>Computer science</option>
+<option>Civil Engineering</option>
+<option>Electronics and Communication Engineering</option>
+<option>Automobile Engineering</option>
+<option>Mechanical Engineering</option>
+</select>
+<br>
+<br>
+<br>
+Name<input type="text" id="t1">
+<br>
+<br>
+<br>
+Address<input type="text">
+<br>
+<br>
+<br>
+Contact No.<input type="text" id="t2">
+<br>
+<br>
+<br>
+Email ID<input type="text id="t3">
+<br>
+<br>
+<br>
+Date of Birth<input type="text">
+<br>
+<br>
+<br>
+Parent's Name<input type="text">
+<br>
+<br>
+<br>
+<input type="button" value="Submit" onclick="f1()">
+</form>
+<br>
+<p>Declaration :</p>
+<br>
+<p>All information entered here are correct to my knowledge. I agree that my application may get rejected in case of any untrue information provided by me. I do hereby promise to obey the rules and regulations of the Institution once I am selected for admission.</p>
+</form>
+</body>
+</html>

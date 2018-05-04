@@ -1,0 +1,110 @@
+<html>
+<head>
+		<title>Application Form</title>
+	<script>
+		function f1(){
+		
+		var tt1 = document.getElementById("t4").value;
+		var tt2 = document.getElementById("t5").value;
+		var tt3 = document.getElementById("t6").value;
+			if(tt1=="")
+				{
+					alert("Name field should not be blank");
+					return;
+				}
+				var tt1_ar=tt1.split(" ");
+				for(i=0;i<tt1_ar.length;i++)
+				{
+					if(!isNaN(tt1_ar[i]))
+					{
+						alert("Enter correct name");
+						return;
+					}
+				}
+
+			
+				if(tt2=="")
+				{
+					alert("Name field should not be blank");
+					return;
+				}
+				var tt2_ar=tt2.split(" ");
+				for(i=0;i<tt2_ar.length;i++)
+				{
+					if(!isNaN(tt2_ar[i]))
+					{
+						alert("Enter correct name");
+						return;
+					}
+				}
+
+			if(tt3=="")
+				{
+					alert("Name field should not be blank");
+					return;
+				}
+				var tt3_ar=tt3.split(" ");
+				for(i=0;i<tt3_ar.length;i++)
+				{
+					if(!isNaN(tt3_ar[i]))
+					{
+						alert("Enter correct name");
+						return;
+					}
+				}
+             }
+	</script>
+	<style>
+		.d3
+		{
+			text-align:center;
+			color:white;
+			background-color:blue;
+		}
+	</style>
+</head>
+<body>
+	<div class="d3">
+		<h1>Application Form</h1>
+	</div>
+	<form>
+		<div class="d1">
+			<h3>Personal Details</h3>
+			<input type="text" placeholder="Applicant's Name:" id="t4">
+			<br>
+			<input type="text" placeholder="Father's Name:" id="t5">
+			<br>
+			<input type="text" placeholder="Mother's Name:" id="t6">
+			<br>
+			<input type="text" placeholder="Address:">
+		</div>
+		<div class="d2">
+			<h3>Academic Records</h3>
+			<table border="5" cellspacing="5" cellpadding="5">
+				<tr>
+					<th>Examination</th> <th>Name of School/College</th> <th>Board/University</th> <th>Marks%</th>
+				</tr>
+				<tr>
+					<td>10th</td> <td><input type="text"></td> <td><input type="text"></td> <td><input type="text"></td> 
+				</tr>
+				<tr>
+					<td>12th</td> <td><input type="text"></td> <td><input type="text"></td> <td><input type="text"></td>
+				</tr>
+				<tr>
+					<td>Diploma</td> <td><input type="text"></td> <td><input type="text"></td> <td><input type="text"></td>
+				</tr>
+				<tr>
+					<td>Graduation</td> <td><input type="text"></td> <td><input type="text"></td> <td><input type="text"></td>
+				</tr>
+				<tr>
+					<td>Post Graduation</td> <td><input type="text"></td> <td><input type="text"></td> <td><input type="text"></td>
+				</tr>
+			</table>
+		</div>
+	</form>
+	<div class="d4">
+		<input type="button" value="Click me" onclick="f1()">
+	</div>
+
+</body>
+</html>

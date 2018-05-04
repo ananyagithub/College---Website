@@ -1,0 +1,87 @@
+<html>
+<head>
+<title>Contact Us</title>
+<script>
+			function f1(){
+                var tt1 = document.getElementById("t4").value;
+				var tt2 = document.getElementById("t5").value;
+			
+				
+				if(tt1=="")
+				{
+					alert("Name field should not be blank");
+					return;
+				}
+				var tt1_ar=tt1.split(" ");
+				for(i=0;i<tt1_ar.length;i++)
+				{
+					if(!isNaN(tt1_ar[i]))
+					{
+						alert("Enter correct name");
+						return;
+					}
+				}
+				if(tt3=="")
+				{
+					alert("Contact number field should not be blank");
+					return;
+				}
+				var tt3_ar=tt3.split(" ");
+				for(i=0;i<tt3_ar.length;i++)
+				{
+					if(isNaN(tt3_ar[i]))
+					{
+						alert("Enter correct number");
+						return;
+					}
+				}
+			}
+				</script>
+				
+<style>
+.d1
+{
+text-align:center;
+color:red;
+}
+.d2
+{
+text-align:center;
+color:red;
+}
+</style>
+</head>
+<body>
+<img src="ss.png">
+<div class="d1">
+<h1>CONTACT US</h1>
+</div>
+<br>
+<h4>Email-id : dscsdec.12@gmail.com</h4>
+<br>
+<h4>Phone number : 9883676329</h4>
+<br>
+<h4>Address : 540, Dum Dum Road, Near Dum Dum Jn. Station, Surermath, Kolkata, West Bengal 700074</h4>
+<br>
+<h4>Website : </h4><a href="http://www.dsec.ac.in/index.php">http://www.dsec.ac.in/index.php</a>
+<br>
+<div class="d2">
+<h1>CONTACT FORM</h1>
+</div>
+Name:<input type="text">
+Email-id:<input type="text" id="t4">
+<br>
+<br>
+<br>
+Phone No.:<input type="text" id="t5">
+<br>
+<br>
+<br>
+<p>Comment:</p>
+<textarea cols="10" rows="5"></textarea>
+<br>
+<br>
+<input type="button" value="Submit" onclick = "f1()">
+</body>
+</html>
+

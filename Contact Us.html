@@ -1,0 +1,109 @@
+<html>
+<head>
+<title>Contact Us</title>
+<script>
+function f1()
+{
+             var n=document.getElementById("t1").value;
+			 var n1=document.getElementById("t2").value;
+			 var b=document.getElementById("t3").value;
+			var flag=0;
+				
+				if(n==""){
+				alert("Name field should not be blank");
+				return;
+			}
+			
+			var n_ar=n.split(" ");
+			for(i=0;i<n_ar.length;i++){
+				
+				if(!isNaN(n_ar[i])){
+					alert("Enter correct name 1");
+					return;
+				}
+			}
+				
+				
+				if(n1=="")
+				{
+					alert("Contact number field should not be blank");
+					return;
+				}
+				var n1_ar=n1.split(" ");
+				for(i=0;i<n1_ar.length;i++)
+				{
+					if(isNaN(n1_ar[i]))
+					{
+						alert("Enter correct number");
+						return;
+					}
+				}
+				if(n1.length!=10)
+				{
+					alert("Enter 10 digits");
+					return;
+				}
+				
+				
+					for(var i = 0 ; i < b.length ; i++){
+					if(b.charAt(i) == '@')
+						flag = flag + 1;
+							
+					if(b.charAt(i) == '.')
+						flag = flag + 1;
+				}
+				
+				if(flag != 2)
+					alert("Not a valid email id");
+					}
+					}
+				}
+				</script>
+				
+<style>
+.d1
+{
+text-align:center;
+color:red;
+}
+.d2
+{
+text-align:center;
+color:red;
+}
+</style>
+</head>
+<body>
+<img src="ss.png">
+<div class="d1">
+<h1>CONTACT US</h1>
+</div>
+<br>
+<h4>Email-id : dscsdec.12@gmail.com</h4>
+<br>
+<h4>Phone number : 9883676329</h4>
+<br>
+<h4>Address : 540, Dum Dum Road, Near Dum Dum Jn. Station, Surermath, Kolkata, West Bengal 700074</h4>
+<br>
+<h4>Website : </h4><a href="http://www.dsec.ac.in/index.php">http://www.dsec.ac.in/index.php</a>
+<br>
+<div class="d2">
+<h1>CONTACT FORM</h1>
+</div>
+Name:<input type="text" id="t1">
+Email-id:<input type="text" id="t3">
+<br>
+<br>
+<br>
+Phone No.:<input type="text" id="t2">
+<br>
+<br>
+<br>
+<p>Comment:</p>
+<textarea cols="10" rows="5"></textarea>
+<br>
+<br>
+<input type="button" value="Submit" onclick="f1()">
+</body>
+</html>
+
